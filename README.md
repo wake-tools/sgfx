@@ -1,3 +1,44 @@
+
+----
+> ⚠️ This is a customized fork of the [Sokol](https://github.com/floooh/sokol) graphics library, maintained by [Wake.Tools](https://wake.tools), for integration into the Wake runtime.
+----
+>🔹 Only the sokol_gfx component of this fork is currently used to build the Wake-compatible graphics backend.
+
+ While this fork is built and packaged internally for Wake.Tools, it remains compatible with the original Sokol sources and build process.  
+ The maintained version is tailored for high stability and deep integration with the Wake environment.
+
+ 🛠️ Developers may create functional derivatives of this fork. However, it is **strongly recommended** to stay aligned with the official Wake.Tools version, which is actively maintained and tested for consistent runtime behavior.
+
+ 📦 To ensure full compatibility with Wake's module system, dynamic libraries should be built using the following naming convention:  
+ `author--name-version-sys-type.ext`
+> (e.g., `myrepo--sokolgfx-0.2.0rc1-w32-r.dll`, `myrepo--sokolgfx-0.2.0rc1-osx-d.dylib`, etc.)
+
+ 🔄 If your changes could benefit the broader Sokol community, consider submitting pull requests to the upstream repository as well.
+
+ 👉 For original sources and full documentation, visit: [Sokol project](https://github.com/floooh/sokol)
+
+----
+### Build tips
+
+🔧 Windows Build Example:
+
+> Create a `example.c` file containing the following to produce a `.dll` usable within the Wake environment:
+```c
+#define SOKOL_DLL
+#define SOKOL_D3D11
+#define SOKOL_IMPL
+#define SOKOL_API_DECL  __declspec(dllexport) 
+#include "sokol_gfx.h"
+```
+> Then compile with a toolchain like cl.exe or gcc:
+```
+gcc -shared -o myrepo--sokolgfx-0.2.0rc1-w32-r.dll example.c
+```
+----
+> © 2025 Majify Technologies.  
+> This fork is distributed under the terms of the MIT License.
+----
+
 <p align="center">
     <img src="assets/logo_full_large.png" style="width: 60%" /><br/><br/>Simple
     <a href="https://github.com/nothings/stb/blob/master/docs/stb_howto.txt">STB-style</a>
