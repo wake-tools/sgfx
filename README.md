@@ -1,3 +1,10 @@
+----
+> ⚠️ This is a customized fork of the [Sokol](https://github.com/floooh/sokol) graphics library, maintained by [Wake.Tools](https://wake.tools), for integration into the Wake runtime.
+> 
+> © 2025 Majify Technologies.  
+> Licensed under the MIT License (see LICENSE file).
+----
+
 <p align="center">
     <img src="assets/logo_full_large.png" style="width: 60%" /><br/><br/>Simple
     <a href="https://github.com/nothings/stb/blob/master/docs/stb_howto.txt">STB-style</a>
