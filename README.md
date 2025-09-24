@@ -1,8 +1,7 @@
 ----
 > ⚠️ This is a customized fork of the [Sokol](https://github.com/floooh/sokol) graphics library, maintained by [Wake.Tools](https://wake.tools), for integration into the Wake runtime.
 > 
-> © 2025 Majify Technologies.  
-> Licensed under the MIT License (see LICENSE file).
+> © 2025 Majify Technologies — Licensed under zlib (see LICENSE).
 ----
 
 <p align="center">
